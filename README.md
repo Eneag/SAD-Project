@@ -1,5 +1,6 @@
 # SAD-Project
 **CubeSat 3U Attitude Dynamics & Control: Project Plan**
+LaTeX: https://prism.openai.com/?u=6baa0cc5-805d-4013-8c9d-439a716e4dbc&pg=1&m=67.tex
 
 ## Project Overview
 - **Spacecraft:** CubeSat 3U 
