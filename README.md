@@ -7,7 +7,7 @@
 - **Attitude Parameterization:** Euler Angles 
 - **Primary Sensor:** Sun Sensor 
 - **Primary Actuator:** Constant Thrust Jets 
-- **Environmental Torques:** Gravity Gradient, Magnetic Torque, Aerodynamic Drag 
+- **Environmental Torques:** 2 between Gravity Gradient, Magnetic Torque, Aerodynamic Drag 
 
 ---
 
