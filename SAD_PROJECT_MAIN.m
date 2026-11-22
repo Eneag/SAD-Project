@@ -15,5 +15,6 @@ simIn = simIn.setModelParameter( ...
 
 out = sim(simIn);
 
-%t = out.tout;
-%A_BL = out.A_BL;
+t = out.tout;
+
+
