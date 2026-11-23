@@ -31,7 +31,7 @@ wx0 = 0.1; %rad/s
 wy0 = 0.01;
 wz0 = 0.01;
 
-wB0 =[wx0 wy0 wz0];
+wB0 =[wx0; wy0; wz0];
 
 
 Ir = 0; %internal spin = 0
@@ -53,4 +53,8 @@ angles0 = [phi0, theta0, xi0];
 %wL = [0; 0; n];
 
 %% ENVIRONMENT
+
+%% Air Drag
+rho_atm = 1.22e-13; % kg/m^3 (wrt 580km)
+Cd = 2.2;
 
