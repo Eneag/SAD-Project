@@ -1,5 +1,6 @@
+%IN THIS FILE ONLY CONSTANTS CAN BE SET (OR CONSTANT-RELATED BRIEF CALCS)
 
-%% Constants
+%% Earth Constants
 G = 6.6743e-20;             %km^3*kg^-1*s^-2
 M_earth = 5.97*10^24;       %Kg
 mu_earth = 398600.435507;   %Km^3/s^2
@@ -7,15 +8,15 @@ R_earth = 6371.2;           %Km
 n_earth = 7.292115e-5;      %rad/s
 
 
-%% Orbit
+%% Mission Orbit
 
 Altitude = 575;         %km
 R = R_earth + Altitude; %km
 
 %% Simulation parameters
-T_orb  = 2 * pi * sqrt(a^3 / mu_earth);        % Orbital period [s]
-t_stop = 560; %1.05 * T_orb                    % Just above 1 full orbit
-dt_step = 0.1;
+T_orb  = 2 * pi * sqrt(a^3 / mu_earth);     % Orbital period [s]
+t_stop = 560; %1.05 * T_orb                 % Simulation time: just above 1 full orbit
+dt_step = 0.1;                              % Simulation step size
 
 
 %% Dynamics
@@ -53,7 +54,9 @@ angles0 = [phi0, theta0, xi0];
 
 %% ENVIRONMENT
 
-%% Air Drag
+% Air Drag
 rho_atm = 1.22e-13; % kg/m^3 (wrt 580km)
 Cd = 2.2;
+
+
 
