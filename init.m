@@ -1,4 +1,4 @@
-%IN THIS FILE ONLY CONSTANTS CAN BE SET (OR CONSTANT-RELATED BRIEF CALCS)
+% IN THIS FILE ONLY CONSTANTS CAN BE SET (OR CONSTANT-RELATED BRIEF CALCS)
 
 %% Earth Constants
 G = 6.6743e-20;             %km^3*kg^-1*s^-2
@@ -8,10 +8,17 @@ R_earth = 6371.2;           %Km
 n_earth = 7.292115e-5;      %rad/s
 
 
-%% Mission Orbit
+%% Mission Orbit and environmental parameters
 
-Altitude = 575;         %km
-R = R_earth + Altitude; %km
+Altitude = 575;             % [km]
+R = R_earth + Altitude;     % [km]
+
+rho   = 1.315e-11;          % Atmospheric density [kg/m^3] (575 km specific)
+CD    = 2.2;                % Drag coefficient
+Ds    = 0.01;               % Residual magnetic dipole [A*m^2]
+B_max = 4e-5;               % Max geomagnetic field [T] (value for 575km passing over the poles)
+Ps    = 9.12e-6;            % Solar radiation pressure [N/m^2]
+q     = 0.6;                % Reflectivity factor
 
 %% Simulation parameters
 T_orb  = 2 * pi * sqrt(a^3 / mu_earth);     % Orbital period [s]
@@ -20,14 +27,16 @@ dt_step = 0.1;                              % Simulation step size
 
 
 %% Dynamics
-Ix = 0.044;                  %kg*m^2
+Ix = 0.044;                  % kg*m^2
 Iy = 0.022;
 Iz = 0.017;
+
+offset = 0.015;              % CoP - CoM offset for drag & SRP [m]
 
 I = diag([Ix, Iy, Iz]);
 I_inv = inv(I);
 
-wx0 = 0.1;                   %rad/s
+wx0 = 0.1;                   % rad/s
 wy0 = 0.01;
 wz0 = 0.01;
 
@@ -51,12 +60,5 @@ angles0 = [phi0, theta0, xi0];
 
 %n = sqrt(G*Me/R^3);
 %wL = [0; 0; n];
-
-%% ENVIRONMENT
-
-% Air Drag
-rho_atm = 1.22e-13; % kg/m^3 (wrt 580km)
-Cd = 2.2;
-
 
 
