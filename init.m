@@ -13,7 +13,7 @@ n_earth = 7.292115e-5;      %rad/s
 Altitude = 575;             % [km]
 R = R_earth + Altitude;     % [km]
 
-rho   = 1.315e-11;          % Atmospheric density [kg/m^3] (575 km specific)
+rho   = 1.315e-4;           % Atmospheric density [kg/km^3] (575 km specific)
 CD    = 2.2;                % Drag coefficient
 Ds    = 0.01;               % Residual magnetic dipole [A*m^2]
 B_max = 4e-5;               % Max geomagnetic field [T] (value for 575km passing over the poles)
