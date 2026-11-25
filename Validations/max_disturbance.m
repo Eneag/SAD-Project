@@ -3,12 +3,12 @@ clc; clear all;
 init
 
 %% 1. Orbital Parameters
-e         = 0.0011;         % Eccentricity
+e         = 0.0011;             % Eccentricity
 i_deg     = 97.75;              % Inclination [deg]
 i_rad     = deg2rad(i_deg);     % Inclination [rad]
 LTDN      = NaN;                % Local Time on Descending Node [hr]
 
-V     = sqrt(mu_earth / R);       % Nominal circular orbital speed [m/s]
+V     = sqrt(mu_earth / R) * 1000;       % Nominal circular orbital speed [m/s]
 
 %% 2. Spacecraft Inertia & Geometry
 delta_I     = max([Ix, Iy, Iz]) - min([Ix, Iy, Iz]);
