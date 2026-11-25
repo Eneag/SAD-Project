@@ -1,19 +1,19 @@
 % IN THIS FILE ONLY CONSTANTS CAN BE SET (OR CONSTANT-RELATED BRIEF CALCS)
 
-%% Earth Constants
-G = 6.6743e-20;             %km^3*kg^-1*s^-2
-M_earth = 5.97*10^24;       %Kg
-mu_earth = 398600.435507;   %Km^3/s^2
-R_earth = 6371.2;           %Km
-n_earth = 7.292115e-5;      %rad/s
-
-
-%% Mission Orbit and environmental parameters
+%% Orbital Constants [only part that uses Km]
+G = 6.6743e-20;             % km^3*kg^-1*s^-2
+M_earth = 5.97*10^24;       % Kg
+mu_earth = 398600.435507;   % Km^3/s^2
+R_earth = 6371.2;           % Km
+n_earth = 7.292115e-5;      % rad/s
 
 Altitude = 575;             % [km]
 R = R_earth + Altitude;     % [km]
 
-rho   = 1.315e-4;           % Atmospheric density [kg/km^3] (575 km specific)
+%% Environmental parameters [from now on, SI units]
+
+
+rho   = 1.315e-13;          % Atmospheric density [kg/m^3] (575 km specific)
 CD    = 2.2;                % Drag coefficient
 Ds    = 0.01;               % Residual magnetic dipole [A*m^2]
 B_max = 4e-5;               % Max geomagnetic field [T] (value for 575km passing over the poles)
