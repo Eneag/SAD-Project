@@ -48,7 +48,7 @@ w0r = 0;
 hr = [0; 0; Ir*w0r];
 
 
-% starting Euler angles
+%% starting Euler angles
 phi0 = deg2rad(10); 
 theta0 = deg2rad(0);
 xi0 = deg2rad(0);
