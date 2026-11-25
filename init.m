@@ -21,7 +21,7 @@ Ps    = 9.12e-6;            % Solar radiation pressure [N/m^2]
 q     = 0.6;                % Reflectivity factor
 
 %% Simulation parameters
-T_orb  = 2 * pi * sqrt(a^3 / mu_earth);     % Orbital period [s]
+%T_orb  = 2 * pi * sqrt(a^3 / mu_earth);     % Orbital period [s]
 t_stop = 560; %1.05 * T_orb                 % Simulation time: just above 1 full orbit
 dt_step = 0.1;                              % Simulation step size
 
